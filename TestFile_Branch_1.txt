@@ -1,2 +1,0 @@
-First test file in firstbranch.
-Modified in firstbranch.
