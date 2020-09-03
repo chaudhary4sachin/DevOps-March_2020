@@ -1,0 +1,14 @@
+#publicly available docker image "python" on docker hub will be pulled
+
+FROM python
+FROM qnib/pytest
+
+#creating directory calculator in container (linux machine)
+RUN mkdir c:\home\calculator
+#copying calculator.py from local directory to container's helloworld folder
+COPY calculator.py /home/calculator/calculator.py
+COPY test_calculator.py /home/calculator/test_calculator.py
+
+#running calculator.py in container
+CMD pytest /home/calculator/test_calculator.py
+ 
